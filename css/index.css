@@ -11,3 +11,489 @@ li, ol, ul {
 a {
   text-decoration: none;
 }
+
+body {
+  background-color: #f9c5d1;
+  background-image: linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%);
+  overflow-x: hidden;
+}
+
+#wrap {
+  width: 100%;
+}
+#wrap .side-menu {
+  width: 100px;
+  height: 100vh;
+  background-color: beige;
+  box-shadow: 0px 0px 20px 0px #fbadf5;
+  position: fixed;
+  z-index: 5;
+}
+#wrap header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+}
+#wrap header .stars-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+#wrap header .stars-bg .stars {
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 21px #fff, 0 0 4px #ffffff, 0 0 6px #ffffff;
+  animation: staropa var(--randomtransition) linear infinite;
+  left: var(--randomstarsleft);
+  top: var(--randomstarstop);
+}
+@keyframes staropa {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#wrap header .typo {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  width: 600px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#wrap header .typo .font {
+  width: 33.3%;
+  height: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  font-weight: bold;
+  font-family: "corbel";
+  z-index: 1;
+  color: #fff;
+  text-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 21px #fff, 0 0 4px #ffffff, 0 0 6px #ffffff;
+}
+#wrap header .bg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#wrap header .bg .bg-moon {
+  width: 130px;
+  top: 150px;
+  left: 400px;
+  position: absolute;
+  filter: drop-shadow(0px 0px 10px rgba(241, 149, 189, 0.8));
+}
+#wrap header .bg .bg-planet {
+  width: 120px;
+  bottom: 50px;
+  left: 500px;
+  position: absolute;
+  filter: drop-shadow(0px 0px 10px rgba(241, 149, 189, 0.8));
+}
+#wrap header .bg .bg-planetA {
+  width: 90px;
+  bottom: 350px;
+  left: 220px;
+  animation: rotation 20s infinite;
+  position: absolute;
+  filter: drop-shadow(0px 0px 10px rgba(241, 149, 189, 0.8));
+}
+#wrap header .bg .bg-planetB {
+  width: 140px;
+  top: 200px;
+  right: 400px;
+  animation: rotation 30s infinite;
+  position: absolute;
+  filter: drop-shadow(0px 0px 10px rgba(241, 149, 189, 0.8));
+}
+#wrap header .bg .bg-starlight {
+  width: 120px;
+  bottom: 150px;
+  right: 170px;
+  animation: blink 7s infinite;
+  position: absolute;
+  filter: drop-shadow(0px 0px 10px rgba(241, 149, 189, 0.8));
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  1% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  15% {
+    opacity: 1;
+  }
+  16% {
+    opacity: 0;
+  }
+  17% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  81% {
+    opacity: 0;
+  }
+  82% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#wrap header .footnote {
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+}
+#wrap header .footnote em {
+  color: #474747;
+}
+#wrap main {
+  width: 100%;
+}
+#wrap main .portpolio-wrap {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+#wrap main .portpolio-wrap .stars-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+#wrap main .portpolio-wrap .stars-bg .stars {
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 21px #fff, 0 0 4px #ffffff, 0 0 6px #ffffff;
+  animation: staropa var(--randomtransition) linear infinite;
+  left: var(--randomstarsleft);
+  top: var(--randomstarstop);
+}
+@keyframes staropa {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#wrap main .portpolio-wrap .bg-rocket {
+  width: 100px;
+  top: 200px;
+  transform: rotate(55deg);
+  animation: rocket-move 30s 5s linear infinite;
+  position: absolute;
+  filter: drop-shadow(0px 0px 10px rgba(241, 149, 189, 0.8));
+}
+@keyframes rocket-move {
+  0% {
+    transform: rotate(75deg);
+    top: 200px;
+    left: 0%;
+  }
+  50% {
+    transform: rotate(90deg);
+    top: 100px;
+    left: 50%;
+  }
+  100% {
+    transform: rotate(105deg);
+    top: 200px;
+    left: 100%;
+  }
+}
+#wrap main .portpolio-wrap .protpolio {
+  width: 1200px;
+  height: 100vh;
+  margin: 150px auto 0 auto;
+  background-color: rebeccapurple;
+  position: relative;
+  z-index: 2;
+}
+#wrap main .portpolio-wrap .protpolio .protpolio-title {
+  padding: 100px 0 0 100px;
+}
+#wrap main .portpolio-wrap .protpolio .protpolio-title h2 {
+  font-weight: bold;
+  font-size: 45px;
+  color: #4A374F;
+}
+#wrap main .portpolio-wrap .protpolio .protpolio-content {
+  width: 100%;
+  height: 600px;
+  background-color: wheat;
+  margin-top: 50px;
+}
+#wrap main .about-me-wrap {
+  width: 100%;
+  height: 100vh;
+  margin-top: 200px;
+  position: relative;
+}
+#wrap main .about-me-wrap .stars-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+#wrap main .about-me-wrap .stars-bg .stars {
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 21px #fff, 0 0 4px #ffffff, 0 0 6px #ffffff;
+  animation: staropa var(--randomtransition) linear infinite;
+  left: var(--randomstarsleft);
+  top: var(--randomstarstop);
+}
+@keyframes staropa {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#wrap main .about-me-wrap .bg-telescope {
+  width: 110px;
+  top: 245px;
+  left: 150px;
+  transform: rotate(-25deg);
+  animation: updown 5s ease infinite;
+  position: absolute;
+  filter: drop-shadow(0px 0px 10px rgba(241, 149, 189, 0.8));
+}
+#wrap main .about-me-wrap .bg-whale {
+  top: -655px;
+  left: 600px;
+  position: absolute;
+  filter: drop-shadow(0px 0px 10px rgba(241, 149, 189, 0.8));
+}
+#wrap main .about-me-wrap .bg-astronaut {
+  width: 80px;
+  bottom: 200px;
+  right: 100px;
+  position: absolute;
+  filter: drop-shadow(0px 0px 10px rgba(241, 149, 189, 0.8));
+}
+@keyframes updown {
+  to {
+    top: 245px;
+  }
+  50% {
+    top: 275px;
+  }
+  from {
+    top: 245px;
+  }
+}
+#wrap main .about-me-wrap .about-me {
+  width: 1200px;
+  height: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+#wrap main .about-me-wrap .about-me .about-me-left {
+  width: 200px;
+  height: 100%;
+}
+#wrap main .about-me-wrap .about-me .about-me-left .about-me-portrait {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: no-repeat 50% 25%/100% url(/images/portrait.jpg);
+  position: absolute;
+  filter: drop-shadow(0px 0px 10px rgba(241, 149, 189, 0.8));
+}
+#wrap main .about-me-wrap .about-me .about-me-right {
+  width: 900px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info {
+  width: calc(100% - 60px);
+  height: 300px;
+  border-radius: 20px;
+  background-color: #fff;
+  z-index: 2;
+  display: flex;
+  padding: 15px 30px 15px 30px;
+  position: absolute;
+  filter: drop-shadow(0px 0px 10px rgba(241, 149, 189, 0.8));
+  position: inherit;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info:not(:last-child) {
+  margin-bottom: 50px;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info:first-child::before {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-bottom: 30px solid #fff;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  transform: rotate(270deg);
+  left: -4%;
+  top: 20%;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left {
+  width: 50%;
+  height: 100%;
+  background-color: rebeccapurple;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left .info-title {
+  padding: 5px;
+  color: #ccc;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left .info-title i {
+  margin-right: 10px;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left .info-title b {
+  text-transform: capitalize;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left .info-wrap {
+  color: #ccc;
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left .info-wrap .infoQ .circle {
+  width: 5px;
+  height: 5px;
+  border: 3px solid #ccc;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left .info-wrap .infoQ p {
+  display: inline-block;
+  margin-right: 20px;
+  text-transform: capitalize;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left .info-wrap .infoA {
+  width: 70%;
+  text-align: left;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right {
+  width: 50%;
+  height: 100%;
+  background-color: wheat;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right .info-title {
+  padding: 5px;
+  color: #ccc;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right .info-title i {
+  margin-right: 10px;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right .info-title b {
+  text-transform: capitalize;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right .ex-wrap {
+  color: #ccc;
+  width: 400px;
+  padding-top: 5px;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right .ex-wrap .infoQ .circle {
+  width: 5px;
+  height: 5px;
+  border: 3px solid #ccc;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right .ex-wrap .infoQ p {
+  display: inline-block;
+  margin-right: 20px;
+  text-transform: capitalize;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right .ex-wrap .exA {
+  font-size: 12px;
+  line-height: 14px;
+  padding: 6px 0px 0px 16px;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box {
+  width: 100%;
+  height: 100%;
+  background-color: rebeccapurple;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box .info-title {
+  padding: 5px;
+  color: #ccc;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box .info-title i {
+  margin-right: 10px;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box .info-title b {
+  text-transform: capitalize;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box .skill-info-wrap {
+  color: #ccc;
+  width: 100%;
+  padding-top: 5px;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box .skill-info-wrap .infoQ .circle {
+  width: 5px;
+  height: 5px;
+  border: 3px solid #ccc;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box .skill-info-wrap .infoQ p {
+  display: inline-block;
+  margin-right: 20px;
+  text-transform: capitalize;
+}
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box .skill-info-wrap .skill-info {
+  font-size: 12px;
+  line-height: 14px;
+  text-align: justify;
+  padding: 6px 16px 0px 16px;
+}
