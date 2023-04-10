@@ -49,6 +49,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// **********배경 js**********
 
+	// **********사이드메뉴 js**********
+
+	let sideMenu = document.querySelector('.side-menu'),
+		sideBtn = document.querySelector('.menu-btn'),
+		MenuBoolean = 0; // 시작 값은 1
+
+		sideBtn.addEventListener('click', (e) => {
+			if(MenuBoolean === 0) {
+				sideBtn.classList.add('btn-on');
+				sideMenu.classList.add('side-on');
+				MenuBoolean = 1;
+			} else if(MenuBoolean === 1) {
+				sideBtn.classList.remove('btn-on');
+				sideMenu.classList.remove('side-on');
+				MenuBoolean = 0;
+			}
+			e.preventDefault;
+		})
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// **********사이드메뉴 js**********
+
 	class CardFilpOnScroll {
 		constructor(wrapper, sticky) {
 			this.wrapper = wrapper
@@ -64,16 +97,16 @@ document.addEventListener('DOMContentLoaded', function () {
 		init() {
 			this.start = this.wrapper.offsetTop
 			this.end = this.wrapper.offsetTop + this.wrapper.offsetHeight - innerHeight * 1.2
-			this. step = (this.end - this.start) / (this.length * 2)
+			this.step = (this.end - this.start) / (this.length * 2)
 		}
 
 		animate() {
 			this.cards.forEach((card, i) => {
 				const s = this.start + this.step * i
 				const e = s + this.step * (this.length + 1)
-				console.log(scrollY)
+				console.log(s)
 
-				if(scrollY <= 5) {
+				if(scrollY <= this.start) {
 					card.style.transform = `
 					perspective(100vw)
 					translateX(100vw)
@@ -102,9 +135,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
-	const mainContent1 = document.querySelector('.about-me1')
+	const aboutMe1 = document.querySelector('.about-me1')
 	const sticky = document.querySelector('.sticky')
-	const cardFilpOnScroll = new CardFilpOnScroll(mainContent1, sticky)
+	const cardFilpOnScroll = new CardFilpOnScroll(aboutMe1, sticky)
 	cardFilpOnScroll.init()
 
 	window.addEventListener('scroll', () => {

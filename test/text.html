@@ -95,34 +95,55 @@
 			border-radius: 50%;
 			background: no-repeat 50% 25%/100% url(/images/portrait.jpg);
 		}
+
+		.wrap {
+			width: 100%;
+			height: 100vh;
+			margin-top: 200px;
+			position: relative;
+		}
+
+		.content {
+			width: 1200px;
+				height: 800px;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+				position: relative;
+				z-index: 2;
+		}
 	</style>
 </head>
 
 <body>
-	<div class="main-content-1"> 
-		<!-- about-me -->
+	<div class="wrap">
+		<div class="content">
 
+		</div>
 
-		<div class="sticky">
-			<div class="title">
-				<h1>최소연은 바보 멍청이 똥개</h1>
-			</div>
-			<div class="card-frame">
-				<div class="card">
-					<div class="front"></div>
-					<div class="back"></div>
+		<div class="main-content-1"> 
+			<!-- about-me -->
+			<div class="sticky">
+				<div class="title">
+					<h1>최소연은 바보 멍청이 똥개</h1>
 				</div>
-				<div class="card">
-					<div class="front">BBBBB</div>
-					<div class="back"></div>
-				</div>
-				<div class="card">
-					<div class="front">CCCCC</div>
-					<div class="back"></div>
-				</div>
-				<div class="card">
-					<div class="front">DDDDD</div>
-					<div class="back"></div>
+				<div class="card-frame">
+					<div class="card">
+						<div class="front"></div>
+						<div class="back"></div>
+					</div>
+					<div class="card">
+						<div class="front">BBBBB</div>
+						<div class="back"></div>
+					</div>
+					<div class="card">
+						<div class="front">CCCCC</div>
+						<div class="back"></div>
+					</div>
+					<div class="card">
+						<div class="front">DDDDD</div>
+						<div class="back"></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -151,8 +172,9 @@
 				this.cards.forEach((card, i) => {
 					const s = this.start + this.step * i
 					const e = s + this.step * (this.length + 1)
+					console.log(s)
 
-					if(scrollY <= 2700) {
+					if(scrollY <= this.start) {
 						card.style.transform = `
 						perspective(100vw)
 						translateX(100vw)
