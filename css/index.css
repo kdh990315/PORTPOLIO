@@ -474,14 +474,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left .info-title {
-  padding: 5px;
-  color: #ccc;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left .info-title i {
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left i {
   margin-right: 10px;
 }
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left .info-title b {
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left b {
   text-transform: capitalize;
 }
 #wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left .info-wrap {
@@ -492,8 +488,8 @@ body {
   padding-top: 5px;
 }
 #wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left .info-wrap .infoQ .circle {
-  width: 5px;
-  height: 5px;
+  width: 3px;
+  height: 3px;
   border: 3px solid #ccc;
   display: inline-block;
   border-radius: 50%;
@@ -503,6 +499,7 @@ body {
   display: inline-block;
   margin-right: 20px;
   text-transform: capitalize;
+  font-size: 12px;
 }
 #wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left .info-wrap .infoA {
   width: 70%;
@@ -513,14 +510,10 @@ body {
   height: 100%;
   background-color: wheat;
 }
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right .info-title {
-  padding: 5px;
-  color: #ccc;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right .info-title i {
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right i {
   margin-right: 10px;
 }
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right .info-title b {
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right b {
   text-transform: capitalize;
 }
 #wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right .ex-wrap {
@@ -529,8 +522,8 @@ body {
   padding-top: 5px;
 }
 #wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right .ex-wrap .infoQ .circle {
-  width: 5px;
-  height: 5px;
+  width: 3px;
+  height: 3px;
   border: 3px solid #ccc;
   display: inline-block;
   border-radius: 50%;
@@ -540,6 +533,7 @@ body {
   display: inline-block;
   margin-right: 20px;
   text-transform: capitalize;
+  font-size: 12px;
 }
 #wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right .ex-wrap .exA {
   font-size: 12px;
@@ -553,14 +547,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box .info-title {
-  padding: 5px;
-  color: #ccc;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box .info-title i {
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box i {
   margin-right: 10px;
 }
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box .info-title b {
+#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box b {
   text-transform: capitalize;
 }
 #wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box .skill-info-wrap {
@@ -569,8 +559,8 @@ body {
   padding-top: 5px;
 }
 #wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box .skill-info-wrap .infoQ .circle {
-  width: 5px;
-  height: 5px;
+  width: 3px;
+  height: 3px;
   border: 3px solid #ccc;
   display: inline-block;
   border-radius: 50%;
@@ -580,6 +570,7 @@ body {
   display: inline-block;
   margin-right: 20px;
   text-transform: capitalize;
+  font-size: 12px;
 }
 #wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box .skill-info-wrap .skill-info {
   font-size: 12px;
@@ -645,36 +636,72 @@ body {
   background-color: #fff;
   font-size: 0.5em;
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
   flex-direction: column;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .portrait {
+#wrap main .about-me1 .sticky .card-frame .card .front .info-title {
+  position: absolute;
+  top: 10%;
+  font-size: 16px;
+  left: 5%;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .info-title i {
+  margin-right: 10px;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .info-title b {
+  text-transform: capitalize;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .front-wrap {
+  width: calc(100% - 30px);
+  padding: 20px 15px;
+  text-align: left;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .front-wrap .portrait {
   width: 200px;
   height: 200px;
-  border-radius: 50%;
   background: no-repeat 50% 25%/100% url(/images/portrait.jpg);
-  top: 5%;
-  position: absolute;
-  filter: drop-shadow(0px 0px 10px rgba(241, 149, 189, 0.8));
+  margin: 0 auto;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .front-wrap .introduction {
+  width: calc(100% - 30px);
+  padding: 20px 15px;
+  text-align: left;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .front-wrap .introduction .introduction-wrap li {
+  font-size: 13px;
+  margin: 5px 0;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .front-wrap .introduction .introduction-wrap li i {
+  font-size: 11px;
+  padding-right: 5px;
 }
 #wrap main .about-me1 .sticky .card-frame .card .front .info-box {
   display: flex;
   flex-direction: column;
-  margin-top: 75px;
+  padding: 20px 15px;
+  position: relative;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .info-box .info-title {
+  position: absolute;
+  top: 0%;
+  font-size: 16px;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .info-box .info-title i {
+  margin-right: 10px;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .info-box .info-title b {
+  text-transform: capitalize;
 }
 #wrap main .about-me1 .sticky .card-frame .card .front .info-box .info-wrap {
-  color: #ccc;
   display: flex;
   width: 400px;
   justify-content: space-between;
   padding-top: 10px;
-  font-size: 13px;
+  font-size: 15px;
 }
 #wrap main .about-me1 .sticky .card-frame .card .front .info-box .info-wrap .infoQ .circle {
-  width: 5px;
-  height: 5px;
+  width: 3px;
+  height: 3px;
   border: 3px solid #ccc;
   display: inline-block;
   border-radius: 50%;
@@ -684,10 +711,73 @@ body {
   display: inline-block;
   margin-right: 20px;
   text-transform: capitalize;
+  font-size: 12px;
 }
 #wrap main .about-me1 .sticky .card-frame .card .front .info-box .info-wrap .infoA {
   width: 50%;
   text-align: left;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .experience {
+  text-align: left;
+  padding: 20px 15px;
+  position: relative;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .experience .info-title {
+  position: absolute;
+  top: 0%;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .experience .info-title i {
+  margin-right: 10px;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .experience .info-title b {
+  text-transform: capitalize;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .experience .ex-wrap {
+  width: 400px;
+  padding-top: 15px;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .experience .ex-wrap .infoQ .circle {
+  width: 3px;
+  height: 3px;
+  border: 3px solid #ccc;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .experience .ex-wrap .infoQ p {
+  display: inline-block;
+  margin-right: 20px;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .experience .ex-wrap .exA {
+  font-size: 12px;
+  line-height: 15px;
+  padding-top: 5px;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .skill-wrap {
+  width: 80%;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-between;
+  margin: 0 auto;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .skill-wrap .skill-box {
+  width: 100px;
+  height: 25px;
+  background-color: #ccc;
+  text-align: center;
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+#wrap main .about-me1 .sticky .card-frame .card .front .skill-wrap .skill-box span {
+  font-size: 12px;
 }
 #wrap main .about-me1 .sticky .card-frame .card .back {
   transform: rotateY(180deg);

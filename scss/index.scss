@@ -43,9 +43,6 @@
 }
 
 @mixin info-title {
-	.info-title {
-		padding: 5px;
-		color: #ccc;
 
 		i {
 			margin-right: 10px;
@@ -54,7 +51,6 @@
 		b {
 			text-transform: capitalize; 
 		};
-	}
 }
 
 @mixin circle {
@@ -62,8 +58,8 @@
 	.infoQ {
 
 		.circle {
-			width: 5px;
-			height: 5px;
+			width: 3px;
+			height: 3px;
 			border: 3px solid #ccc;
 			display: inline-block;
 			border-radius: 50%;
@@ -74,6 +70,7 @@
 			display: inline-block;
 			margin-right: 20px;
 			text-transform: capitalize;
+			font-size: 12px;
 		}
 	}
 
@@ -662,40 +659,135 @@ body {
 							background-color: #fff;
 							font-size: 0.5em;
 							display: flex;
-							align-items: center;
 							justify-content: center;
-							text-align: center;
 							flex-direction: column;
 
-							.portrait {
-								width: 200px;
-								height: 200px;
-								border-radius: 50%;
-								background: no-repeat 50% 25%/100% url(/images/portrait.jpg);
-								top: 5%;
+							.info-title {
+								position: absolute;
+								top: 10%;
+								font-size: 16px;
+								left: 5%;
 
-								@include neon_line;
+								@include info-title;
+							}
+
+							.front-wrap {
+								width: calc(100% - 30px);
+								padding: 20px 15px;
+								text-align: left;
+
+								.portrait {
+									width: 200px;
+									height: 200px;
+									background: no-repeat 50% 25%/100% url(/images/portrait.jpg);
+									margin: 0 auto;
+								}
+								
+								.introduction {
+									width: calc(100% - 30px);
+									padding: 20px 15px;
+									text-align: left;
+	
+									.introduction-wrap {
+	
+	
+										li {
+											font-size: 13px;
+											margin: 5px 0;
+	
+											i {
+												font-size: 11px;
+												padding-right: 5px;
+											}
+										}
+									}
+								}
 							}
 
 							.info-box {
 								display: flex;
 								flex-direction: column;
-								margin-top: 75px;
+								padding: 20px 15px;
+								position: relative;
+
+								.info-title {
+									position: absolute;
+									top: 0%;
+									font-size: 16px;
+
+									@include info-title;
+								}
 
 								.info-wrap {
-									color: #ccc;
 									display: flex;
 									width: 400px;
 									justify-content: space-between;
 									padding-top: 10px;
-									font-size: 13px;
-	
+									font-size: 15px;
+
 									@include circle;
 	
 	
 									.infoA {
 										width: 50%;
 										text-align: left;
+									}
+								}
+							}
+
+							.experience {
+								text-align: left;
+								padding: 20px 15px;
+								position: relative;
+
+								.info-title {
+									position: absolute;
+									top: 0%;
+
+
+									@include info-title;
+								}
+									
+								.ex-wrap {
+									width: 400px;
+									padding-top: 15px;
+							
+									@include circle;
+							
+									.exA {
+										font-size: 12px;
+										line-height: 15px;
+										padding-top: 5px;
+									}
+								
+								}
+							}
+
+							.skill-wrap {
+
+								width: 80%;
+								height: 300px;
+								display: flex;
+								flex-wrap: wrap;
+								flex-direction: row;
+								justify-content: space-around;
+								align-content: space-between;
+								margin: 0 auto;
+
+
+								.skill-box {
+									width: 100px;
+									height: 25px;
+									background-color: #ccc;
+									text-align: center;
+									display: flex;
+									padding: 10px 20px;
+									align-items: center;
+									justify-content: center;
+									border-radius: 10px;
+
+									span {
+										font-size: 12px;
 									}
 								}
 							}
