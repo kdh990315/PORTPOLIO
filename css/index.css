@@ -683,7 +683,7 @@ body {
 }
 #wrap main .about-me1 .sticky .card-frame .card .front .info-box .info-title {
   position: absolute;
-  top: 0%;
+  top: -5%;
   font-size: 16px;
 }
 #wrap main .about-me1 .sticky .card-frame .card .front .info-box .info-title i {
@@ -720,11 +720,12 @@ body {
 #wrap main .about-me1 .sticky .card-frame .card .front .experience {
   text-align: left;
   padding: 20px 15px;
+  margin-top: 20px;
   position: relative;
 }
 #wrap main .about-me1 .sticky .card-frame .card .front .experience .info-title {
   position: absolute;
-  top: 0%;
+  top: -5%;
 }
 #wrap main .about-me1 .sticky .card-frame .card .front .experience .info-title i {
   margin-right: 10px;
@@ -783,4 +784,64 @@ body {
   transform: rotateY(180deg);
   background-color: #e0ded7;
   background-image: repeating-linear-gradient(0deg, #3b3a38, #3b3a38 33.3%, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 67%);
+}
+#wrap main .about-me1 .sticky .skill-modal-wrap {
+  position: static;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+}
+#wrap main .about-me1 .sticky .skill-modal-wrap .skill-modal {
+  width: 100%;
+  height: 100%;
+}
+#wrap main .about-me1 .sticky .skill-modal-wrap .modal-on {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#wrap main .about-me1 .sticky .skill-modal-wrap .modal-on .modal {
+  width: 800px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 101;
+  background-color: #fff;
+  border-radius: 30px;
+}
+#wrap main .about-me1 .sticky .skill-modal-wrap .modal-on .modal .modal-title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+}
+#wrap main .about-me1 .sticky .skill-modal-wrap .modal-on .modal .modal-title-wrap .modal-title span {
+  text-transform: uppercase;
+  font-size: 20px;
+  padding-left: 20px;
+  font-weight: bold;
+}
+#wrap main .about-me1 .sticky .skill-modal-wrap .modal-on .modal .modal-title-wrap .close {
+  cursor: pointer;
+  padding: 5px 10px;
+}
+#wrap main .about-me1 .sticky .skill-modal-wrap .modal-on .modal .modal-title-wrap .close span {
+  font-size: 30px;
+}
+#wrap main .about-me1 .sticky .skill-modal-wrap .modal-on .modal .modal-content {
+  width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#wrap main .about-me1 .sticky .skill-modal-wrap .modal-on .modal .modal-content ul li {
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+#wrap main .about-me1 .sticky .skill-modal-wrap .modal-on .modal .modal-content ul li i {
+  padding-right: 5px;
+  font-size: 12px;
 }

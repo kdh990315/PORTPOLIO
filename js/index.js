@@ -82,6 +82,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// **********사이드메뉴 js**********
 
+	// **********카드애니메이션 js**********
+
 	class CardFilpOnScroll {
 		constructor(wrapper, sticky) {
 			this.wrapper = wrapper
@@ -147,4 +149,11 @@ document.addEventListener('DOMContentLoaded', function () {
 	window.addEventListener('resize', () => {
 		cardFilpOnScroll.init()
 	})
+
+	// **********카드애니메이션 js**********
+	
+
+	// **********모달창 js**********
+
+	// **********모달창 js**********
 });

@@ -712,7 +712,7 @@ body {
 
 								.info-title {
 									position: absolute;
-									top: 0%;
+									top: -5%;
 									font-size: 16px;
 
 									@include info-title;
@@ -738,11 +738,12 @@ body {
 							.experience {
 								text-align: left;
 								padding: 20px 15px;
+								margin-top: 20px;
 								position: relative;
 
 								.info-title {
 									position: absolute;
-									top: 0%;
+									top: -5%;
 
 
 									@include info-title;
@@ -800,7 +801,94 @@ body {
 						}
 					
 					}
+
+
 		
+				} //card-frame
+
+				.skill-modal-wrap {
+					position: static;
+					width: 100vw;
+					height: 100vh;
+
+					z-index: 100;
+
+					.skill-modal {
+						width: 100%;
+						height: 100%;
+					}
+
+					.modal-on {
+						
+						background-color: rgba(0, 0, 0, 0.7);
+
+						
+						.modal {
+							width: 800px;
+							height: 400px;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							transform: translate(-50%, -50%);
+							z-index: 101;
+							background-color: #fff;
+							border-radius: 30px;
+
+							.modal-title-wrap {
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+								padding: 0px 15px;
+
+								.modal-title {
+
+									span {
+										text-transform: uppercase;
+										font-size: 20px;
+										padding-left: 20px;
+										font-weight: bold;
+									}
+								}
+
+								.close {
+
+									cursor: pointer;
+									padding: 5px 10px;
+	
+									span {
+										font-size: 30px;
+									}
+								}
+							}
+
+							.modal-content {
+								width: 600px;
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+
+								ul {
+
+									li {
+										color: #aaa;
+										display: flex;
+										align-items: center;
+										margin-top: 15px;
+
+										i {
+											padding-right: 5px;
+											font-size: 12px;
+										}
+
+										span {
+
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}
