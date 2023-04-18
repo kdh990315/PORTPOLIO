@@ -348,243 +348,13 @@ body {
   background-color: wheat;
   margin-top: 50px;
 }
-#wrap main .about-me-wrap {
-  width: 100%;
-  height: 100vh;
-  margin-top: 200px;
-  position: relative;
-}
-#wrap main .about-me-wrap .stars-bg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1;
-}
-#wrap main .about-me-wrap .stars-bg .stars {
-  background: #fff;
-  border-radius: 50%;
-  position: absolute;
-  box-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 21px #fff, 0 0 4px #ffffff, 0 0 6px #ffffff;
-  animation: staropa var(--randomtransition) linear infinite;
-  left: var(--randomstarsleft);
-  top: var(--randomstarstop);
-}
-@keyframes staropa {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-#wrap main .about-me-wrap .bg-telescope {
-  width: 110px;
-  top: 245px;
-  left: 150px;
-  transform: rotate(-25deg);
-  animation: updown 5s ease infinite;
-  position: absolute;
-  filter: drop-shadow(0px 0px 10px rgba(241, 149, 189, 0.8));
-}
-#wrap main .about-me-wrap .bg-whale {
-  top: -655px;
-  left: 600px;
-  position: absolute;
-  filter: drop-shadow(0px 0px 10px rgba(241, 149, 189, 0.8));
-}
-#wrap main .about-me-wrap .bg-astronaut {
-  width: 80px;
-  bottom: 200px;
-  right: 100px;
-  position: absolute;
-  filter: drop-shadow(0px 0px 10px rgba(241, 149, 189, 0.8));
-}
-@keyframes updown {
-  to {
-    top: 245px;
-  }
-  50% {
-    top: 275px;
-  }
-  from {
-    top: 245px;
-  }
-}
-#wrap main .about-me-wrap .about-me {
-  width: 1200px;
-  height: 800px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  z-index: 2;
-}
-#wrap main .about-me-wrap .about-me .about-me-left {
-  width: 200px;
-  height: 100%;
-}
-#wrap main .about-me-wrap .about-me .about-me-left .about-me-portrait {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: no-repeat 50% 25%/100% url(/images/portrait.jpg);
-  position: absolute;
-  filter: drop-shadow(0px 0px 10px rgba(241, 149, 189, 0.8));
-}
-#wrap main .about-me-wrap .about-me .about-me-right {
-  width: 900px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info {
-  width: calc(100% - 60px);
-  height: 300px;
-  border-radius: 20px;
-  background-color: #fff;
-  z-index: 2;
-  display: flex;
-  padding: 15px 30px 15px 30px;
-  position: absolute;
-  filter: drop-shadow(0px 0px 10px rgba(241, 149, 189, 0.8));
-  position: inherit;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info:not(:last-child) {
-  margin-bottom: 50px;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info:first-child::before {
-  position: absolute;
-  content: "";
-  width: 0px;
-  height: 0px;
-  border-bottom: 30px solid #fff;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  transform: rotate(270deg);
-  left: -4%;
-  top: 20%;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left {
-  width: 50%;
-  height: 100%;
-  background-color: rebeccapurple;
-  flex-direction: column;
-  justify-content: space-between;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left i {
-  margin-right: 10px;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left b {
-  text-transform: capitalize;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left .info-wrap {
-  color: #ccc;
-  display: flex;
-  width: 400px;
-  justify-content: space-between;
-  padding-top: 5px;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left .info-wrap .infoQ .circle {
-  width: 3px;
-  height: 3px;
-  border: 3px solid #ccc;
-  display: inline-block;
-  border-radius: 50%;
-  margin-right: 5px;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left .info-wrap .infoQ p {
-  display: inline-block;
-  margin-right: 20px;
-  text-transform: capitalize;
-  font-size: 12px;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-left .info-wrap .infoA {
-  width: 70%;
-  text-align: left;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right {
-  width: 50%;
-  height: 100%;
-  background-color: wheat;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right i {
-  margin-right: 10px;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right b {
-  text-transform: capitalize;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right .ex-wrap {
-  color: #ccc;
-  width: 400px;
-  padding-top: 5px;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right .ex-wrap .infoQ .circle {
-  width: 3px;
-  height: 3px;
-  border: 3px solid #ccc;
-  display: inline-block;
-  border-radius: 50%;
-  margin-right: 5px;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right .ex-wrap .infoQ p {
-  display: inline-block;
-  margin-right: 20px;
-  text-transform: capitalize;
-  font-size: 12px;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-info-right .ex-wrap .exA {
-  font-size: 12px;
-  line-height: 14px;
-  padding: 6px 0px 0px 16px;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box {
-  width: 100%;
-  height: 100%;
-  background-color: rebeccapurple;
-  flex-direction: column;
-  justify-content: space-between;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box i {
-  margin-right: 10px;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box b {
-  text-transform: capitalize;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box .skill-info-wrap {
-  color: #ccc;
-  width: 100%;
-  padding-top: 5px;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box .skill-info-wrap .infoQ .circle {
-  width: 3px;
-  height: 3px;
-  border: 3px solid #ccc;
-  display: inline-block;
-  border-radius: 50%;
-  margin-right: 5px;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box .skill-info-wrap .infoQ p {
-  display: inline-block;
-  margin-right: 20px;
-  text-transform: capitalize;
-  font-size: 12px;
-}
-#wrap main .about-me-wrap .about-me .about-me-right .about-me-info .about-me-skill-info-box .skill-info-wrap .skill-info {
-  font-size: 12px;
-  line-height: 14px;
-  text-align: justify;
-  padding: 6px 16px 0px 16px;
-}
-#wrap main .about-me1 {
+#wrap main .about-me {
   width: 100%;
   height: 500vh;
   margin: 100vh 0;
   border: 1px solid red;
 }
-#wrap main .about-me1 .sticky {
+#wrap main .about-me .sticky {
   position: sticky;
   top: 0;
   height: 100vh;
@@ -593,7 +363,7 @@ body {
   justify-content: center;
   overflow: hidden;
 }
-#wrap main .about-me1 .sticky .title {
+#wrap main .about-me .sticky .title {
   width: 100%;
   position: absolute;
   top: 50%;
@@ -601,11 +371,11 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-#wrap main .about-me1 .sticky .title h2 {
+#wrap main .about-me .sticky .title h2 {
   font-size: 50px;
   letter-spacing: 50px;
 }
-#wrap main .about-me1 .sticky .card-frame {
+#wrap main .about-me .sticky .card-frame {
   position: absolute;
   width: 95vw;
   height: 30vw;
@@ -613,7 +383,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-#wrap main .about-me1 .sticky .card-frame .card {
+#wrap main .about-me .sticky .card-frame .card {
   width: 24%;
   height: 100%;
   display: flex;
@@ -623,7 +393,7 @@ body {
   position: relative;
   transform: perspective(100vw) translateX(100vw) rotateY(180deg);
 }
-#wrap main .about-me1 .sticky .card-frame .card .front, #wrap main .about-me1 .sticky .card-frame .card .back {
+#wrap main .about-me .sticky .card-frame .card .front, #wrap main .about-me .sticky .card-frame .card .back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -632,74 +402,74 @@ body {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front {
+#wrap main .about-me .sticky .card-frame .card .front {
   background-color: #fff;
   font-size: 0.5em;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .info-title {
+#wrap main .about-me .sticky .card-frame .card .front .info-title {
   position: absolute;
   top: 10%;
   font-size: 16px;
   left: 5%;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .info-title i {
+#wrap main .about-me .sticky .card-frame .card .front .info-title i {
   margin-right: 10px;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .info-title b {
+#wrap main .about-me .sticky .card-frame .card .front .info-title b {
   text-transform: capitalize;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .front-wrap {
+#wrap main .about-me .sticky .card-frame .card .front .front-wrap {
   width: calc(100% - 30px);
   padding: 20px 15px;
   text-align: left;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .front-wrap .portrait {
+#wrap main .about-me .sticky .card-frame .card .front .front-wrap .portrait {
   width: 200px;
   height: 200px;
   background: no-repeat 50% 25%/100% url(/images/portrait.jpg);
   margin: 0 auto;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .front-wrap .introduction {
+#wrap main .about-me .sticky .card-frame .card .front .front-wrap .introduction {
   width: calc(100% - 30px);
   padding: 20px 15px;
   text-align: left;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .front-wrap .introduction .introduction-wrap li {
+#wrap main .about-me .sticky .card-frame .card .front .front-wrap .introduction .introduction-wrap li {
   font-size: 13px;
   margin: 5px 0;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .front-wrap .introduction .introduction-wrap li i {
+#wrap main .about-me .sticky .card-frame .card .front .front-wrap .introduction .introduction-wrap li i {
   font-size: 11px;
   padding-right: 5px;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .info-box {
+#wrap main .about-me .sticky .card-frame .card .front .info-box {
   display: flex;
   flex-direction: column;
   padding: 20px 15px;
   position: relative;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .info-box .info-title {
+#wrap main .about-me .sticky .card-frame .card .front .info-box .info-title {
   position: absolute;
   top: -5%;
   font-size: 16px;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .info-box .info-title i {
+#wrap main .about-me .sticky .card-frame .card .front .info-box .info-title i {
   margin-right: 10px;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .info-box .info-title b {
+#wrap main .about-me .sticky .card-frame .card .front .info-box .info-title b {
   text-transform: capitalize;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .info-box .info-wrap {
+#wrap main .about-me .sticky .card-frame .card .front .info-box .info-wrap {
   display: flex;
   width: 400px;
   justify-content: space-between;
   padding-top: 10px;
   font-size: 15px;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .info-box .info-wrap .infoQ .circle {
+#wrap main .about-me .sticky .card-frame .card .front .info-box .info-wrap .infoQ .circle {
   width: 3px;
   height: 3px;
   border: 3px solid #ccc;
@@ -707,37 +477,37 @@ body {
   border-radius: 50%;
   margin-right: 5px;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .info-box .info-wrap .infoQ p {
+#wrap main .about-me .sticky .card-frame .card .front .info-box .info-wrap .infoQ p {
   display: inline-block;
   margin-right: 20px;
   text-transform: capitalize;
   font-size: 12px;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .info-box .info-wrap .infoA {
+#wrap main .about-me .sticky .card-frame .card .front .info-box .info-wrap .infoA {
   width: 50%;
   text-align: left;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .experience {
+#wrap main .about-me .sticky .card-frame .card .front .experience {
   text-align: left;
   padding: 20px 15px;
   margin-top: 20px;
   position: relative;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .experience .info-title {
+#wrap main .about-me .sticky .card-frame .card .front .experience .info-title {
   position: absolute;
   top: -5%;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .experience .info-title i {
+#wrap main .about-me .sticky .card-frame .card .front .experience .info-title i {
   margin-right: 10px;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .experience .info-title b {
+#wrap main .about-me .sticky .card-frame .card .front .experience .info-title b {
   text-transform: capitalize;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .experience .ex-wrap {
+#wrap main .about-me .sticky .card-frame .card .front .experience .ex-wrap {
   width: 400px;
   padding-top: 15px;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .experience .ex-wrap .infoQ .circle {
+#wrap main .about-me .sticky .card-frame .card .front .experience .ex-wrap .infoQ .circle {
   width: 3px;
   height: 3px;
   border: 3px solid #ccc;
@@ -745,18 +515,18 @@ body {
   border-radius: 50%;
   margin-right: 5px;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .experience .ex-wrap .infoQ p {
+#wrap main .about-me .sticky .card-frame .card .front .experience .ex-wrap .infoQ p {
   display: inline-block;
   margin-right: 20px;
   text-transform: capitalize;
   font-size: 12px;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .experience .ex-wrap .exA {
+#wrap main .about-me .sticky .card-frame .card .front .experience .ex-wrap .exA {
   font-size: 12px;
   line-height: 15px;
   padding-top: 5px;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .skill-wrap {
+#wrap main .about-me .sticky .card-frame .card .front .skill-wrap {
   width: 80%;
   height: 300px;
   display: flex;
@@ -766,7 +536,7 @@ body {
   align-content: space-between;
   margin: 0 auto;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .skill-wrap .skill-box {
+#wrap main .about-me .sticky .card-frame .card .front .skill-wrap .skill-box {
   width: 100px;
   height: 25px;
   background-color: #ccc;
@@ -776,31 +546,35 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  cursor: pointer;
 }
-#wrap main .about-me1 .sticky .card-frame .card .front .skill-wrap .skill-box span {
+#wrap main .about-me .sticky .card-frame .card .front .skill-wrap .skill-box span {
   font-size: 12px;
 }
-#wrap main .about-me1 .sticky .card-frame .card .back {
+#wrap main .about-me .sticky .card-frame .card .back {
   transform: rotateY(180deg);
   background-color: #e0ded7;
   background-image: repeating-linear-gradient(0deg, #3b3a38, #3b3a38 33.3%, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 67%);
 }
-#wrap main .about-me1 .sticky .skill-modal-wrap {
+#wrap main .about-me .sticky .skill-modal-wrap {
   position: static;
   width: 100vw;
   height: 100vh;
+  display: none;
   z-index: 100;
 }
-#wrap main .about-me1 .sticky .skill-modal-wrap .skill-modal {
+#wrap main .about-me .sticky .skill-modal-wrap .skill-modal {
   width: 100%;
   height: 100%;
+  display: none;
 }
-#wrap main .about-me1 .sticky .skill-modal-wrap .modal-on {
+#wrap main .about-me .sticky .skill-modal-wrap .modal-on {
   background-color: rgba(0, 0, 0, 0.7);
+  display: block;
 }
-#wrap main .about-me1 .sticky .skill-modal-wrap .modal-on .modal {
+#wrap main .about-me .sticky .skill-modal-wrap .modal-on .modal {
   width: 800px;
-  height: 400px;
+  height: var(--modalHeight);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -809,39 +583,39 @@ body {
   background-color: #fff;
   border-radius: 30px;
 }
-#wrap main .about-me1 .sticky .skill-modal-wrap .modal-on .modal .modal-title-wrap {
+#wrap main .about-me .sticky .skill-modal-wrap .modal-on .modal .modal-title-wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0px 15px;
 }
-#wrap main .about-me1 .sticky .skill-modal-wrap .modal-on .modal .modal-title-wrap .modal-title span {
+#wrap main .about-me .sticky .skill-modal-wrap .modal-on .modal .modal-title-wrap .modal-title span {
   text-transform: uppercase;
   font-size: 20px;
   padding-left: 20px;
   font-weight: bold;
 }
-#wrap main .about-me1 .sticky .skill-modal-wrap .modal-on .modal .modal-title-wrap .close {
+#wrap main .about-me .sticky .skill-modal-wrap .modal-on .modal .modal-title-wrap .close {
   cursor: pointer;
   padding: 5px 10px;
 }
-#wrap main .about-me1 .sticky .skill-modal-wrap .modal-on .modal .modal-title-wrap .close span {
+#wrap main .about-me .sticky .skill-modal-wrap .modal-on .modal .modal-title-wrap .close span {
   font-size: 30px;
 }
-#wrap main .about-me1 .sticky .skill-modal-wrap .modal-on .modal .modal-content {
+#wrap main .about-me .sticky .skill-modal-wrap .modal-on .modal .modal-content {
   width: 600px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#wrap main .about-me1 .sticky .skill-modal-wrap .modal-on .modal .modal-content ul li {
+#wrap main .about-me .sticky .skill-modal-wrap .modal-on .modal .modal-content ul li {
   color: #aaa;
   display: flex;
   align-items: center;
   margin-top: 15px;
 }
-#wrap main .about-me1 .sticky .skill-modal-wrap .modal-on .modal .modal-content ul li i {
-  padding-right: 5px;
-  font-size: 12px;
+#wrap main .about-me .sticky .skill-modal-wrap .modal-on .modal .modal-content ul li i {
+  padding-right: 7px;
+  font-size: 10px;
 }

@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	let sideMenu = document.querySelector('.side-menu'),
 		sideBtn = document.querySelector('.menu-btn'),
-		MenuBoolean = 0; // 시작 값은 1
+		MenuBoolean = 0; // default 0
 
 		sideBtn.addEventListener('click', (e) => {
 			if(MenuBoolean === 0) {
@@ -106,7 +106,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			this.cards.forEach((card, i) => {
 				const s = this.start + this.step * i
 				const e = s + this.step * (this.length + 1)
-				console.log(s)
 
 				if(scrollY <= this.start) {
 					card.style.transform = `
@@ -137,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
-	const aboutMe1 = document.querySelector('.about-me1')
+	const aboutMe1 = document.querySelector('.about-me')
 	const sticky = document.querySelector('.sticky')
 	const cardFilpOnScroll = new CardFilpOnScroll(aboutMe1, sticky)
 	cardFilpOnScroll.init()
@@ -154,6 +153,36 @@ document.addEventListener('DOMContentLoaded', function () {
 	
 
 	// **********모달창 js**********
+
+	const skillBox = document.querySelectorAll('.skill-box'),
+		skillModal = document.querySelectorAll('.skill-modal'),
+		skillModalWrap = document.querySelector('.skill-modal-wrap'),
+		modalClose = document.querySelectorAll('.close'),
+		modal = document.querySelectorAll('.modal'),
+		modalContent = document.querySelectorAll('.modal-content > ul');
+
+		skillBox.forEach((item, index) => {
+			item.addEventListener('click', function () {
+				skillModalWrap.style.display = 'block'
+				skillModal[index].classList.add('modal-on')
+
+				//내용의 높이의 따라 모달창의 높이 변경
+				const modalHeight = modalContent[index].clientHeight + 110
+				modal[index].style.setProperty('--modalHeight', modalHeight + 'px')
+			})
+		});
+
+		modalClose.forEach((item, index) => {
+			item.addEventListener('click', function () {
+				skillModalWrap.style.display = 'none'
+				skillModal[index].classList.remove('modal-on')
+			})
+		});
+
+		modal.forEach((item) => {
+			const modalHeight = item.clientHeight;
+			console.log(modalHeight)
+		})
 
 	// **********모달창 js**********
 });
