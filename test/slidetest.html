@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+	integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>Document</title>
+	<script src="slidetest.js"></script>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		ul, li, ol {
+			list-style: none;
+		}
+
+		 .portpolio-slide-wrap {
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+			height: 600px;
+		}
+
+		.slide-container {
+			position: absolute;
+			width: 1200px;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			transition: left 0.3s ease-in;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.slide {
+			position: absolute;
+
+			text-align: center;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+			list-style: none;
+			background-color: yellow;
+			border: 1px solid #ccc;
+			opacity: .7;
+			filter: grayscale(.7);
+		}
+
+		.slide-left {
+			bottom: 3%;
+			left: -1%;
+			width: 350px;
+			height: 350px;
+		}
+
+		.slide-center {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 470px;
+			height: 470px;
+			opacity: 1;
+			filter: grayscale(0);
+		}
+
+		.slide-right {
+			bottom: 3%;
+			right: -1%;
+			width: 350px;
+			height: 350px;
+		}
+
+		.slide-container>.slide .contents {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+/*
+		/* Nav */
+		/* .portpolio-slide-wrap .controls {
+			position: absolute;
+			top: 50%;
+			transform:translateY(-50%);
+			z-index: 999999;
+			height: 5rem;
+			width: 5rem;
+			border-radius: 50%;
+			transition: all .3s ease-in;
+			background: rgba(255, 255, 255, .5);
+			text-align: center;
+			line-height: 5rem;
+			font-size: 20px;
+			color: #444;
+		}
+
+		#prev {
+			left: 20px;
+		}
+
+		#next {
+			right: 20px;
+		}
+
+		#prev.disabled,
+		#next.disabled {
+			display: none;
+		}
+
+		.slide-wrapper .controls:hover {
+			background: rgba(255, 255, 255, 1);
+		}
+
+		.pager {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			text-align: center;
+		}
+
+		.pager a {
+			width: 10px;
+			height: 10px;
+			margin: 0 10px;
+			border-radius: 50%;
+			background: #ccc;
+			text-indent: -9999em;
+			cursor: pointer;
+			display: inline-block;
+		}
+
+		.pager a.active {
+			background: #000;
+		} */
+	</style>
+</head>
+<body>
+	<!-- 포트폴리오 슬라이드 -->
+	<!-- <article class="portpolio-slide-wrap">
+		<ul class="slide-container">
+			<li class="slide">
+				<div class="contents">
+					<h2>slide1</h2>
+				</div>
+			</li>
+
+			<li class="slide">
+				<div class="contents">
+					<h2>slide2</h2>
+				</div>
+			</li>
+
+			<li class="slide">
+				<div class="contents">
+					<h2>slide3</h2>
+				</div>
+			</li>
+
+			<li class="slide">
+				<div class="contents">
+					<h2>slide4</h2>
+				</div>
+			</li>
+
+			<li class="slide">
+				<div class="contents">
+					<h2>slide5</h2>
+				</div>
+			</li>
+		</ul>
+		
+		<a href="#" id="prev" class="controls"><i class="fas fa-chevron-left"></i></a>
+		<a href="#" id="next" class="controls"><i class="fas fa-chevron-right"></i></a>
+
+		<p class="pager">
+			
+				<a href="" data-num="0">0</a>
+				<a href="" class="active">1</a>
+				<a href="">2</a>
+				<a href="">3</a>
+				<a href="">4</a> 
+				
+		</p>
+	</article> -->
+
+	<article class="portpolio-slide-wrap">
+		<div class="slide-container">
+			<div class="slide">
+				<div class="contents">
+					<h2>slide1</h2>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="contents">
+					<h2>slide2</h2>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="contents">
+					<h2>slide3</h2>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="contents">
+					<h2>slide3</h2>
+				</div>
+			</div>
+		</div>
+	</article>
+</body>
+</html>
