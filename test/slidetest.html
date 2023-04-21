@@ -40,7 +40,10 @@
 
 		.slide {
 			position: absolute;
-
+			top: 50%;
+			transform: translateY(-50%);
+			width: 300px;
+			height: 300px;
 			text-align: center;
 			background-repeat: no-repeat;
 			background-position: center center;
@@ -48,11 +51,11 @@
 			list-style: none;
 			background-color: yellow;
 			border: 1px solid #ccc;
-			opacity: .7;
-			filter: grayscale(.7);
+			/* opacity: .7;
+			filter: grayscale(.7); */
 		}
 
-		.slide-left {
+		/* .slide-left {
 			bottom: 3%;
 			left: -1%;
 			width: 350px;
@@ -74,7 +77,7 @@
 			right: -1%;
 			width: 350px;
 			height: 350px;
-		}
+		} */
 
 		.slide-container>.slide .contents {
 			position: absolute;
@@ -82,9 +85,13 @@
 			top: 50%;
 			transform: translate(-50%, -50%);
 		}
+
+		.contents-on {
+			transform: scale(1.5) translateY(-50%);
+		}
 /*
 		/* Nav */
-		/* .portpolio-slide-wrap .controls {
+		.portpolio-slide-wrap .controls {
 			position: absolute;
 			top: 50%;
 			transform:translateY(-50%);
@@ -138,7 +145,8 @@
 
 		.pager a.active {
 			background: #000;
-		} */
+		} 
+
 	</style>
 </head>
 <body>
@@ -198,7 +206,7 @@
 				</div>
 			</div>
 
-			<div class="slide">
+			<div class="slide contents-on">
 				<div class="contents">
 					<h2>slide2</h2>
 				</div>
@@ -212,10 +220,23 @@
 
 			<div class="slide">
 				<div class="contents">
-					<h2>slide3</h2>
+					<h2>slide4</h2>
 				</div>
 			</div>
 		</div>
 	</article>
+			
+	<a href="#" id="prev" class="controls"><i class="fas fa-chevron-left"></i></a>
+	<a href="#" id="next" class="controls"><i class="fas fa-chevron-right"></i></a>
+
+	<p class="pager">
+		
+			<a href="" data-num="0">0</a>
+			<a href="" class="active">1</a>
+			<a href="">2</a>
+			<a href="">3</a>
+			<a href="">4</a> 
+			
+	</p>
 </body>
 </html>

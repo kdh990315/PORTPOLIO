@@ -301,7 +301,7 @@ body {
 				}
 			}
 
-			.protpolio {
+			.portpolio {
 				width: 1200px;
 				height: 100vh;
 				margin: 150px auto 0 auto;
@@ -309,7 +309,7 @@ body {
 				position: relative;
 				z-index: 2;
 
-				.protpolio-title {
+				.portpolio-title {
 					padding: 100px 0 0 100px;
 
 					h2 {
@@ -319,11 +319,82 @@ body {
 					}
 				}
 
-				.protpolio-slide-wrap {
+				.portpolio-slide-wrap {
 					width: 100%;
 					height: 600px;
-					background-color: wheat;
 					margin-top: 50px;
+					position: relative;
+					overflow: hidden;
+
+					.slide-container {
+						width: 100%;
+						height: 100%;
+						background-color: rosybrown;
+						position: absolute;
+						left: 0;
+						top: 0;
+						transition: all 1s;
+
+						.slide {
+							position: absolute;
+							top: 0;
+							width: 100%;
+							height: 100%;
+						}
+					}
+				}
+
+				.controls {
+					position: absolute;
+					top: 50%;
+					transform:translateY(-50%);
+					z-index: 999999;
+					height: 5rem;
+					width: 5rem;
+					border-radius: 50%;
+					transition: all .3s ease-in;
+					background: rgba(255, 255, 255, .5);
+					text-align: center;
+					line-height: 5rem;
+					font-size: 20px;
+					color: #444;
+				}
+
+				#prev {
+					left: 20px;
+				}
+				
+				#next {
+					right: 20px;
+				}
+				
+				.disabled {
+					display: none;
+				}
+
+				
+				.pager {
+					position: absolute;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					text-align: center;
+
+					a {
+						width: 10px;
+						height: 10px;
+						margin: 0 10px;
+						border-radius: 50%;
+						background: #ccc;
+						text-indent: -9999em;
+						cursor: pointer;
+						display: inline-block;
+					}
+
+					.active {
+						background: #000;
+					}
+
 				}
 			}
 		} //portpolio-wrap

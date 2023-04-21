@@ -67,20 +67,14 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 			e.preventDefault;
 		})
-
-
-
-
-
-
-
-
-
-
-
-
-
 	// **********사이드메뉴 js**********
+
+
+
+
+
+
+
 
 	// **********카드애니메이션 js**********
 
@@ -152,6 +146,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	// **********카드애니메이션 js**********
 	
 
+
+
+
+
+
+
 	// **********모달창 js**********
 
 	const skillBox = document.querySelectorAll('.skill-box'),
@@ -181,8 +181,83 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		modal.forEach((item) => {
 			const modalHeight = item.clientHeight;
-			console.log(modalHeight)
 		})
 
 	// **********모달창 js**********
+
+
+
+
+
+
+	// **********슬라이드 js**********
+
+	let container = document.querySelector('.slide-container'),
+		slides = document.querySelectorAll('.slide'),
+		slideCount = slides.length,
+		currentIndex = 0,
+		pager = document.querySelector('.pager'),
+		innerPager = '',
+		Nextbtn = document.querySelector('#next'),
+		Prevbtn = document.querySelector('#prev');
+
+		//슬라이드 요소 가로배치 및 페이저 생성
+		for(let i=0; i < slideCount; i++) {
+			slides[i].style.left = i * 100 + '%';
+			innerPager += `<a href="">${i}</a>`;
+		}
+		pager.innerHTML = innerPager;
+		let pagerBtn = pager.querySelectorAll('a');
+
+		//슬라이드의 이동, 페이저 업데이트
+		function slideMove(idx) {
+			//슬라이드 이동
+			container.style.left = idx * -100 + '%';
+			currentIndex = idx;
+			
+			//페이저 업데이트
+			for(pB of pagerBtn) {
+				pB.classList.remove('active');
+			}
+			pagerBtn[currentIndex].classList.add('active');
+
+			if(idx == 0) {
+				Prevbtn.classList.add('disabled');
+			} else if (idx == slideCount - 1) {
+				Nextbtn.classList.add('disabled');
+			} else {
+				Nextbtn.classList.remove('disabled');
+				Prevbtn.classList.remove('disabled');
+			}
+		}
+		
+		slideMove(0);
+
+		//다음버튼
+		Nextbtn.addEventListener('click', (e) => {
+			e.preventDefault();
+
+			if(currentIndex != slideCount - 1) {
+				slideMove(currentIndex + 1);
+			}
+		})
+
+		//이전버튼
+		Prevbtn.addEventListener('click', (e) => {
+			e.preventDefault();
+
+			if(currentIndex >= 1) {
+				slideMove(currentIndex - 1);
+			}
+		})
+
+		pagerBtn.forEach((item, index) => {
+			item.addEventListener('click', e => {
+				e.preventDefault();
+				slideMove(index);
+			})
+		})
+
+
+	// **********슬라이드 js**********
 });
