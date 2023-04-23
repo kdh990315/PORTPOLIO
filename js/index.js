@@ -260,4 +260,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// **********슬라이드 js**********
+
+	// **********포트폴리오 이미지 js**********
+
+	let portpolioImg = document.querySelectorAll('.portpolio-img');
+
+	portpolioImg.forEach((item, index) => {
+		item.addEventListener('mouseover', () => {
+			portpolioImg[index].style.top = -(portpolioImg[index].clientHeight) + 450 + 'px';
+		});
+		item.addEventListener('mouseleave', () => {
+			portpolioImg[index].style.top = 0;
+		})
+	})
+
+	
+
+	// **********포트폴리오 이미지 js**********
 });

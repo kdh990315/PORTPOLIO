@@ -330,7 +330,6 @@ body {
   width: 1200px;
   height: 100vh;
   margin: 150px auto 0 auto;
-  background-color: rebeccapurple;
   position: relative;
   z-index: 2;
 }
@@ -352,7 +351,6 @@ body {
 #wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container {
   width: 100%;
   height: 100%;
-  background-color: rosybrown;
   position: absolute;
   left: 0;
   top: 0;
@@ -363,6 +361,83 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
+  background-color: #fff;
+}
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-left {
+  width: 400px;
+  height: 100%;
+  position: relative;
+}
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-left .portfolio-content-info-box {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-left .portfolio-content-info-box .portfolio-content-title {
+  font-size: 32px;
+  font-weight: 300;
+  color: #333;
+}
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-left .portfolio-content-info-box .portfolio-content-info {
+  padding-top: 30px;
+  font-size: 20px;
+  color: #121212;
+}
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-left .portfolio-content-info-box .portfolio-content-info2 {
+  padding-top: 13px;
+  font-size: 12px;
+}
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-left .portfolio-content-view-btn {
+  font-size: 20px;
+  padding: 10px 35px;
+  border: 1px solid #ababab;
+  letter-spacing: 5px;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-right {
+  width: 800px;
+  height: 100%;
+}
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-right .content-portpolio-img {
+  width: 100%;
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-right .content-portpolio-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: inherit;
+  width: 100%;
+  height: auto;
+  transition: 10s ease-in-out;
+}
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-right .portfolio-skill-box {
+  position: absolute;
+  width: 400px;
+  top: 5px;
+  left: 5px;
+}
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-right .portfolio-skill-box .skills {
+  padding: 6px 12px;
+  border: 1px solid #ababab;
+  border-radius: 10px;
+  margin: 6px 15px 0 0;
+  display: inline-block;
+  font-size: 11px;
+  box-shadow: 2.5px 2px 3px #d5d5d5;
+  text-transform: uppercase;
 }
 #wrap main .portpolio-wrap .portpolio .controls {
   position: absolute;
