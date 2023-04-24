@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+// font-family: 'Archivo', 'Noto Sans KR', sans-serif;
+// font-family: 'Noto Sans KR', sans-serif;
+
 @mixin neon_line {
 	position: absolute;
 	filter: drop-shadow(0px 0px 10px rgb(241, 149, 189, 0.8));
@@ -48,6 +52,7 @@
 
     b {
         text-transform: capitalize; 
+		font-size: 25px
     };
 }
 
@@ -73,30 +78,26 @@
 	}
 
 }
-@mixin skill-button {
-	.portfolio-skill-box {
-		position: absolute;
-		bottom: 30px;
-		left: 400px;
+@mixin tag {
+	.skills {
+		padding: 6px 12px;
+		border: 1px solid #ababab;
+		border-radius: 10px;
+		margin-right: 15px;
+		display: inline-block;
+		font-size: 11px;
+		box-shadow: 2.5px 2px 3px #d5d5d5;
+		text-transform: uppercase;
 
-		.skills {
-			padding: 6px 12px;
-			border: 1px solid #ababab;
-			border-radius: 10px;
-			margin-right: 15px;
-			display: inline-block;
-			font-size: 11px;
-			box-shadow: 2.5px 2px 3px #d5d5d5;
-			text-transform: uppercase;
-
-		}
 	}
 }
+
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Lato','Noto Sans KR';
+    font-family: 'Archivo', 'Noto Sans KR', sans-serif;
+	letter-spacing: 0.1em;
 }
 
 li, ol, ul {

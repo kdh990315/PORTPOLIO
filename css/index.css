@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
-  font-family: "Lato", "Noto Sans KR";
+  font-family: "Archivo", "Noto Sans KR", sans-serif;
+  letter-spacing: 0.1em;
 }
 
 li, ol, ul {
@@ -361,17 +363,32 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff;
 }
 #wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content {
   width: 100%;
   height: 100%;
   display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 30px;
 }
 #wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-left {
-  width: 400px;
-  height: 100%;
+  width: 380px;
+  height: 500px;
   position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+}
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-left .portfolio-content-title-num {
+  position: absolute;
+  top: -60px;
+  left: 0;
+}
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-left .portfolio-content-title-num b {
+  font-size: 230px;
+  letter-spacing: 0px;
+  color: #eee;
 }
 #wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-left .portfolio-content-info-box {
   position: absolute;
@@ -387,22 +404,25 @@ body {
 }
 #wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-left .portfolio-content-info-box .portfolio-content-info {
   padding-top: 30px;
-  font-size: 20px;
+  font-size: 16px;
   color: #121212;
 }
 #wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-left .portfolio-content-info-box .portfolio-content-info2 {
   padding-top: 13px;
   font-size: 12px;
 }
-#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-left .portfolio-content-view-btn {
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-left .portfolio-content-btn-wrap {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  bottom: 50px;
+  width: 100%;
+}
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-left .portfolio-content-btn-wrap .portfolio-content-btn {
   font-size: 20px;
   padding: 10px 35px;
   border: 1px solid #ababab;
   letter-spacing: 5px;
-  position: absolute;
-  bottom: 80px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 #wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-right {
   width: 800px;
@@ -413,6 +433,7 @@ body {
   height: 450px;
   position: relative;
   overflow: hidden;
+  margin-top: 60px;
 }
 #wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-right .content-portpolio-img img {
   position: absolute;
@@ -423,17 +444,27 @@ body {
   height: auto;
   transition: 10s ease-in-out;
 }
-#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-right .portfolio-skill-box {
-  position: absolute;
-  width: 400px;
-  top: 5px;
-  left: 5px;
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-right .portfolio-skill-box-wrap {
+  margin-top: 10px;
 }
-#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-right .portfolio-skill-box .skills {
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-right .portfolio-skill-box-wrap .portfolid-skill-box .skills {
   padding: 6px 12px;
   border: 1px solid #ababab;
   border-radius: 10px;
-  margin: 6px 15px 0 0;
+  margin-right: 15px;
+  display: inline-block;
+  font-size: 11px;
+  box-shadow: 2.5px 2px 3px #d5d5d5;
+  text-transform: uppercase;
+}
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-right .portfolio-skill-box-wrap .portfolid-skill-tag {
+  margin-top: 10px;
+}
+#wrap main .portpolio-wrap .portpolio .portpolio-slide-wrap .slide-container .slide .content .content-right .portfolio-skill-box-wrap .portfolid-skill-tag .skills {
+  padding: 6px 12px;
+  border: 1px solid #ababab;
+  border-radius: 10px;
+  margin-right: 15px;
   display: inline-block;
   font-size: 11px;
   box-shadow: 2.5px 2px 3px #d5d5d5;
@@ -444,21 +475,23 @@ body {
   top: 50%;
   transform: translateY(-50%);
   z-index: 999999;
-  height: 5rem;
-  width: 5rem;
   border-radius: 50%;
   transition: all 0.3s ease-in;
   background: rgba(255, 255, 255, 0.5);
   text-align: center;
-  line-height: 5rem;
   font-size: 20px;
   color: #444;
 }
+#wrap main .portpolio-wrap .portpolio #prev i, #wrap main .portpolio-wrap .portpolio #next i {
+  padding: 7px 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+}
 #wrap main .portpolio-wrap .portpolio #prev {
-  left: 20px;
+  left: -110px;
 }
 #wrap main .portpolio-wrap .portpolio #next {
-  right: 20px;
+  right: -110px;
 }
 #wrap main .portpolio-wrap .portpolio .disabled {
   display: none;
@@ -487,7 +520,6 @@ body {
   width: 100%;
   height: 500vh;
   margin: 100vh 0;
-  border: 1px solid red;
 }
 #wrap main .about-me .sticky {
   position: sticky;
@@ -498,6 +530,32 @@ body {
   justify-content: center;
   overflow: hidden;
 }
+#wrap main .about-me .sticky .stars-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+#wrap main .about-me .sticky .stars-bg .stars {
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 21px #fff, 0 0 4px #ffffff, 0 0 6px #ffffff;
+  animation: staropa var(--randomtransition) linear infinite;
+  left: var(--randomstarsleft);
+  top: var(--randomstarstop);
+}
+@keyframes staropa {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #wrap main .about-me .sticky .title {
   width: 100%;
   position: absolute;
@@ -507,8 +565,12 @@ body {
   text-align: center;
 }
 #wrap main .about-me .sticky .title h2 {
-  font-size: 50px;
-  letter-spacing: 50px;
+  font-size: 70px;
+  letter-spacing: 40px;
+  color: #e9e9e9;
+  position: absolute;
+  filter: drop-shadow(0px 0px 10px rgba(241, 149, 189, 0.8));
+  position: initial;
 }
 #wrap main .about-me .sticky .card-frame {
   position: absolute;
@@ -517,6 +579,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 5;
 }
 #wrap main .about-me .sticky .card-frame .card {
   width: 24%;
@@ -555,6 +618,7 @@ body {
 }
 #wrap main .about-me .sticky .card-frame .card .front .info-title b {
   text-transform: capitalize;
+  font-size: 25px;
 }
 #wrap main .about-me .sticky .card-frame .card .front .front-wrap {
   width: calc(100% - 30px);
@@ -588,7 +652,7 @@ body {
 }
 #wrap main .about-me .sticky .card-frame .card .front .info-box .info-title {
   position: absolute;
-  top: -5%;
+  top: -10%;
   font-size: 16px;
 }
 #wrap main .about-me .sticky .card-frame .card .front .info-box .info-title i {
@@ -596,6 +660,7 @@ body {
 }
 #wrap main .about-me .sticky .card-frame .card .front .info-box .info-title b {
   text-transform: capitalize;
+  font-size: 25px;
 }
 #wrap main .about-me .sticky .card-frame .card .front .info-box .info-wrap {
   display: flex;
@@ -630,13 +695,14 @@ body {
 }
 #wrap main .about-me .sticky .card-frame .card .front .experience .info-title {
   position: absolute;
-  top: -5%;
+  top: -10%;
 }
 #wrap main .about-me .sticky .card-frame .card .front .experience .info-title i {
   margin-right: 10px;
 }
 #wrap main .about-me .sticky .card-frame .card .front .experience .info-title b {
   text-transform: capitalize;
+  font-size: 25px;
 }
 #wrap main .about-me .sticky .card-frame .card .front .experience .ex-wrap {
   width: 400px;
@@ -674,7 +740,7 @@ body {
 #wrap main .about-me .sticky .card-frame .card .front .skill-wrap .skill-box {
   width: 100px;
   height: 25px;
-  background-color: #ccc;
+  background-color: rgba(207, 206, 255, 0.7);
   text-align: center;
   display: flex;
   padding: 10px 20px;
@@ -684,6 +750,30 @@ body {
   cursor: pointer;
 }
 #wrap main .about-me .sticky .card-frame .card .front .skill-wrap .skill-box span {
+  font-size: 16px;
+}
+#wrap main .about-me .sticky .card-frame .card .front .certificate-wrap {
+  padding: 20px 15px;
+}
+#wrap main .about-me .sticky .card-frame .card .front .certificate-wrap .info-wrap {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  padding-top: 10px;
+  font-size: 15px;
+}
+#wrap main .about-me .sticky .card-frame .card .front .certificate-wrap .infoQ .circle {
+  width: 3px;
+  height: 3px;
+  border: 3px solid #ccc;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+#wrap main .about-me .sticky .card-frame .card .front .certificate-wrap .infoQ p {
+  display: inline-block;
+  margin-right: 20px;
+  text-transform: capitalize;
   font-size: 12px;
 }
 #wrap main .about-me .sticky .card-frame .card .back {
